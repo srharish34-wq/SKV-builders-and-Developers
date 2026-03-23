@@ -2535,6 +2535,78 @@ img {
   color: #ffffff;
   opacity: 0.9;
 }
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 50px 40px 30px 40px;
+}
+
+.category-heading h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0b2c4d; /* change to match your brand color */
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.category-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #b8860b, #e2c55e, transparent);
+  border-radius: 2px;
+}
+
+/* Mirror the left line for the right side */
+.category-heading .category-line:last-child {
+  background: linear-gradient(to left, #b8860b, #e2c55e, transparent);
+}
+/* ===== EQUAL CARD SIZE FIX ===== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 30px;
+  padding: 0 40px 40px 40px;
+  align-items: stretch;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* stretch all cards equally */
+}
+
+.project-img {
+  width: 100%;
+  height: 220px; /* fixed image height for all cards */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* fills remaining card space */
+  padding: 20px;
+}
+
+.project-content p:not(.location) {
+  flex: 1; /* pushes button to bottom */
+}
+
+.know-more-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
 
 
 
